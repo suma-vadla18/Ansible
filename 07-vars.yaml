@@ -11,6 +11,6 @@
   tasks:
   - name: print info
     ansible.builtin.debug:
-      msg: "Course is: {{ COURSE }}, Trainer is: {{ TRAINER }}"
+      msg: "Course is: {{ username }}, Trainer is: {{ password }}"
   
   
