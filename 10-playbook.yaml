@@ -3,15 +3,24 @@
   connection: local
   vars: 
     Name: "Ansible from Play level"
-  #vars_files:
-   #- course.yaml
+  vars_files:
+   - course.yaml
   vars_prompt:
     - name: Name   
       prompt: please enter your name
       private: false
   tasks:
   - name: printing name
-    #vars:
-    # Name: "Ansible from Task level "
+    vars:
+      Name: "Ansible from Task level "
     ansible.builtin.debug:
       msg: "hi {{ Name }}"
+
+
+      #args
+      #task level
+      #file
+      #prompt
+      #play
+      #inventory
+      
