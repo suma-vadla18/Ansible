@@ -7,5 +7,5 @@
       msg: "hello {{ item }}"
     loop:
     - Ramesh
-    - SIVAKUMAR
-    - Sudheer
+    - SIVAKUMAR Reddy
+    - Sudheer Vadla
