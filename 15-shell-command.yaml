@@ -1,0 +1,25 @@
+- name: ansible command vs shell command
+  hosts: local
+  connection: local
+  tasks: 
+  #- name: command module test
+  # ansible.builtin.command: cat /etc/passwd | grep root  #this will give error because we cannot use pipes, redirection etc in command module
+  # register: users_output 
+
+  - name: shell module test
+    ansible.builtin.shell: cat /etc/passwd | grep root
+    register: users_output
+  - name: print users_output
+    ansible.builtin.debug:
+       msg: "{{ users_output }}"
+
+  - name: shell module test
+    ansible.builtin.shell: ls -ltr > files.txt
+    register: files_output
+  - name: print files_output
+    ansible.builtin.debug:
+       msg: "{{ files_output }}"
+
+
+
+    
