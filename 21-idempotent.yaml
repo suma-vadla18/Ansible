@@ -4,5 +4,5 @@
   connection: local
   tasks:
   - name: user creation
-  ansible.builtin.user:
-    name: john
+    ansible.builtin.user:
+      name: john
